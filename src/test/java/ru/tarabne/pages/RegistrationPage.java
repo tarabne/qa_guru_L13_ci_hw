@@ -6,6 +6,8 @@ import ru.tarabne.pages.components.CalendarComponent;
 import ru.tarabne.pages.components.FileUploaderComponent;
 import ru.tarabne.pages.components.ResultTableComponent;
 
+import java.time.Duration;
+
 import static com.codeborne.selenide.Condition.hidden;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
@@ -36,6 +38,7 @@ public class RegistrationPage {
         open("/automation-practice-form");
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#fixedban').remove()");
+        Duration.ofSeconds(5);
         SelenideElement bannerRoot = $(".fc-consent-root");
         if (bannerRoot.isDisplayed()) {
             bannerRoot.$(byText("Consent")).click();
