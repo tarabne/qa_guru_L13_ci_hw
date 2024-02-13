@@ -6,8 +6,6 @@ import ru.tarabne.pages.components.CalendarComponent;
 import ru.tarabne.pages.components.FileUploaderComponent;
 import ru.tarabne.pages.components.ResultTableComponent;
 
-import java.time.Duration;
-
 import static com.codeborne.selenide.Condition.hidden;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
