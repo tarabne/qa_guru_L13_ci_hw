@@ -36,6 +36,7 @@ public class RegistrationPage {
         open("/automation-practice-form");
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#fixedban').remove()");
+        sleep(3000);
         SelenideElement bannerRoot = $(".fc-consent-root");
         if (bannerRoot.isDisplayed()) {
             bannerRoot.$(byText("Consent")).click();
